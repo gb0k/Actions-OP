@@ -13,3 +13,5 @@ sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/theme
 # Delete default password
 sed -i "/CYXluq4wUazHjmCDBCqXF/d" package/default-settings/files/zzz-default-settings
 
+# Build x86_64 with Linux Kernel 4.19
+sed -i "s/4.14/4.19/g" target/linux/x86/Makefile
